@@ -57,17 +57,17 @@ Estórias
 -Como USUARIO, preciso ter acesso as configurações de perfil da ferramenta
     > Usuário deve ser capaz de alterar foto, nome, email e senha quando logado na ferramenta
 
--Como USUARIO, preciso poder consultar, adicionar, editar, excluir tarefas para organizar minha lista de afazeres
+-Como USUARIO, preciso poder gerenciar tarefas para organizar minha lista de afazeres
     > Usuário deve visualizar uma lista com todas as suas tarefas
     > Usuário deve ser capaz de inserir tarefas diversas, com ou sem horários determinados
     > Usuário deve ter capacidade de marcar um checkbox confirmando a conclusão da tarefa
     > Usuário deve ser capaz de editar informações das tarefas já inseridas 
     > Usuário deve ser capaz de excluir a tarefa desejada
-    > Usuário deve ser capaz de alterar a ordem de suas tarefas conforme desejado(drag and drop)
 
 -Como USUARIO, preciso poder exportar minhas tarefas em um arquivo
     > Usuário deve ser capaz de gerar um relatório (em PDF) através de uma ferramenta no sistema (um botão)
-    > 
+
+
 
 $ docker run --name mysql-container -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mysql mysql
 $ winpty docker exec -it mysql-container mysql -uroot -p
