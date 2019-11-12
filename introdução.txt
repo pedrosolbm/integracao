@@ -1,0 +1,74 @@
+﻿teste unitário
+teste de integração
+npm /yarn
+
+texto a ser comparado vem ANTES do .equals()
+* ES lint
+* sonarQube
+    - treasures - 
+    
+
+Livros
+- The Clean Coder
+- Code Clean
+
+Ferramentas
+Polarium
+
+Nexus
+
+servidor de integração contínua
+Jenkins, bamboo
+
+testes automatizados
+sonarQube
+pmd
+findbugs
+checkstyle
+
+
+
+Projeto CRUD - Rocketseat
+incluir, alterar, excluir dados no front-end,
+
+alguma coisa em um banco de dados
+
+node.js para back-end
+sequalize - framework para conectar node.js ao banco
+
+documentação - história
+
+modelagem de banco de dados
+
+Descrição do problema
+Descrição da resolução do problema
+-quais são as funcionalidades do sistema
+
+getpostman.com
+insomnia.rest
+
+2. 
+(b)
+Estórias
+-Como USUARIO, preciso fazer login para ter acesso a minha lista de tarefas
+    > Usuário deve informar corretamente o email e sua senha para obter acesso ao sistema
+    > Deve haver um botão de recuperação de senha caso o usuário precise recuperar algum dado esquecido
+
+-Como USUARIO, preciso ter acesso as configurações de perfil da ferramenta
+    > Usuário deve ser capaz de alterar foto, nome, email e senha quando logado na ferramenta
+
+-Como USUARIO, preciso poder consultar, adicionar, editar, excluir tarefas para organizar minha lista de afazeres
+    > Usuário deve visualizar uma lista com todas as suas tarefas
+    > Usuário deve ser capaz de inserir tarefas diversas, com ou sem horários determinados
+    > Usuário deve ter capacidade de marcar um checkbox confirmando a conclusão da tarefa
+    > Usuário deve ser capaz de editar informações das tarefas já inseridas 
+    > Usuário deve ser capaz de excluir a tarefa desejada
+    > Usuário deve ser capaz de alterar a ordem de suas tarefas conforme desejado(drag and drop)
+
+-Como USUARIO, preciso poder exportar minhas tarefas em um arquivo
+    > Usuário deve ser capaz de gerar um relatório (em PDF) através de uma ferramenta no sistema (um botão)
+    > 
+
+$ docker run --name mysql-container -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mysql mysql
+$ winpty docker exec -it mysql-container mysql -uroot -p
+
