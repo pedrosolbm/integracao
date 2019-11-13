@@ -1,40 +1,67 @@
 const Sequelize = require('sequelize');
 const db = require('./database');
-const Task = require('./Task');
+const bcrypt = require('bcryptjs');
 
-const User = db.define('users', {
-    firstName: {
+const User = db.define('user', {
+    name: {
         type: Sequelize.STRING,
         required: true,
         allowNull: false
-    },
-    lastName: {
-        type: Sequelize.STRING,
-        required: true,
-    },
-    age: {
-        type: Sequelize.INTEGER,
-        required: true,
     },
     email: {
         type: Sequelize.STRING,
         required: true,
         allowNull: false
     },
-    password: {
+    tel: {
+        type: Sequelize.INTEGER,
+        required: false,
+    },
+    senha: {
         type: Sequelize.STRING,
         required: true,
         allowNull: false
-    }
+    },
+    status: {
+        type: Sequelize.BOOLEAN,
+        required: true,
+        allowNull: false,
+    },
+
+}, {
+    freezeTableName: true,
 });
 
-/* User.create({
-    firstName: "José",
-    lastName: "Silva",
-    age: '18',
-    email: 'ze@meuemail.com'
-}); */
+const Task = db.define('task', {
+    tarefa: {
+        type: Sequelize.STRING
+    },
+    data: {
+        type: Sequelize.DATEONLY,
+    },
+    hora: {
+        type: Sequelize.TIME,
+    },
+    status: {
+        type: Sequelize.BOOLEAN,
+    },
+    /*  user_id:{
+         type: Sequelize.INTEGER,
+         allowNull: false,
+         references:{
+             model: require("./User"),
+             key: "id"
+         }
+     } */
+
+}, {
+    freezeTableName: true,
+});
+
 User.hasMany(Task);
 Task.belongsTo(User);
+/* Forçar o user primeiro, depois comentar e forçar o task */
+// User.sync({ force: true });
+// Task.sync({ force: true });
 
-module.exports = User;
+module.exports = {User,Task};

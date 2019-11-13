@@ -1,15 +1,20 @@
-const mysql = require('mysql');
-const connection = mysql.createConnection({
-    host:'localhost',
-    port:3306,
-    user: 'root',
-    database:'integracao',
-    password:'mysql'
-});
+const Sequelize = require('sequelize')
 
-
-connection.connect(function (err) {
-    if (err) return console.log(err);
-    console.log('conectou');
-    createTable(connection);
+const db = new Sequelize('dt', 'root', 'mysql', {
+    host: 'localhost',
+    port: 3306,
+    dialect: 'mysql'
 });
+// db.sync({force:true});
+db.authenticate({force:true})
+    .then(() => { console.log("Conectado ao banco...") })
+    .catch(err => { console.log('Erro: ', err) });
+
+module.exports = db;
+/* const db = new Sequelize('dt', 'postgres', 'postgres', {
+    host: 'localhost',
+    port: 5432,
+    dialect: 'postgres'
+});
+*/
+

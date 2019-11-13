@@ -1,18 +1,39 @@
 const Sequelize = require('sequelize');
 const db = require('./database');
 
-const Task = db.define('tasks', {
-    title: {
+const Task = db.define('task', {
+    tarefa: {
         type: Sequelize.STRING
     },
-    content: {
-        type: Sequelize.TEXT
-    }
-});
+    data: {
+        type: Sequelize.DATEONLY,
+    },
+    hora: {
+        type: Sequelize.TIME,
+    },
+    status: {
+        type: Sequelize.BOOLEAN,
+    },
+    /*  user_id:{
+         type: Sequelize.INTEGER,
+         allowNull: false,
+         references:{
+             model: require("./User"),
+             key: "id"
+         }
+     } */
 
-/* Post.create({
-    title: "nodeJS",
-    content: "Teste criação do node"
+}, {
+    freezeTableName: true,
 });
- */
-module.exports = Post;
+// User.hasMany(Task);
+// Task.sync({ force: true });
+
+/* Task.create({
+    tarefa: "Lavar o cachorro",
+    data: "2021-10-10",
+    hora: "19:30",
+    status:false,
+    userID:1
+}); */
+module.exports = Task;
