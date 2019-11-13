@@ -1,11 +1,11 @@
 const User = require('../models/User');
 
 module.exports = {
-    async index(req,res){
+    async index(req, res) {
         const user = await User.findAll();
         return res.json(user);
     },
-    async tasks(req,res){
+    async tasks(req, res) {
         const user = await User.findAll({ include: [{ all: true }] });
         return res.json(user);
     },
@@ -18,7 +18,15 @@ module.exports = {
         return res.json(user);
     },
     async create(req, res) {
-        const user = await User.create(req.body);
+        const user = await User.create(
+            {
+                name: req.body.name,
+                tel: req.body.tel,
+                email: req.body.email,
+                senha: req.body.senha,
+                status: true
+            }
+        );
         return res.json(user);
     },
     async update(req, res) {
