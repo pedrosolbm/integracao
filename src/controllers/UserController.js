@@ -1,16 +1,20 @@
-const Sequelize = require('sequelize');
 const User = require('../models/User');
+
 module.exports = {
-    async index(req, res) {
+    async index(req,res){
         const user = await User.findAll();
         return res.json(user);
     },
-    async posts(req, res) {
+    async tasks(req,res){
         const user = await User.findAll({ include: [{ all: true }] });
         return res.json(user);
     },
     async search(req, res) {
         const user = await User.findByPk(req.params.id);
+        return res.json(user);
+    },
+    async posts(req, res) {
+        const user = await User.findAll({ include: [{ all: true }] });
         return res.json(user);
     },
     async create(req, res) {
