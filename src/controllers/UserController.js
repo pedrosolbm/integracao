@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const bycrypt = require('bcryptjs');
 
 module.exports = {
     async index(req, res) {
@@ -23,7 +24,7 @@ module.exports = {
                 name: req.body.name,
                 tel: req.body.tel,
                 email: req.body.email,
-                senha: req.body.senha,
+                senha: bycrypt.hashSync(req.body.senha,9,true),
                 status: true
             }
         );

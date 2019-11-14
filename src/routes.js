@@ -16,8 +16,15 @@ router.get('/', (req, res) => {
         res.end(data);
     });
 });
+//Redireciona pra pagina de cadastro
 router.get('/cadastrar',(req, res) => {
     fs.readFile(__dirname + "/views/cadastrar.html", function (err, data) {
+        res.end(data);
+    });
+});
+
+router.get('/dashboard',(req, res) => {
+    fs.readFile(__dirname + "/views/dashboard.html", function (err, data) {
         res.end(data);
     });
 });
