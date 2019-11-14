@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('./database');
-const Task = require('./Task')
+const Task = require('./Task');
+
 const User = db.define('user', {
     name: {
         type: Sequelize.STRING,

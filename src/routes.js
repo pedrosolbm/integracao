@@ -46,13 +46,15 @@ router.get('/list/users', urlencodedParser, UserController.index);
 router.get('/list/tasks', urlencodedParser, TaskController.index);
 router.get('/list/user_tasks', urlencodedParser, UserController.tasks);
 
+
 router.get('/list/users/:id', urlencodedParser, UserController.search);
 router.get('/list/tasks/:id', urlencodedParser, TaskController.search);
+router.get('/list/user_tasks/:id', urlencodedParser, UserController.userTasks);
 
 router.post('/register/users', urlencodedParser, UserController.create);
 router.post('/register/tasks', urlencodedParser, UserController.create);
 
-router.get('/login/users', urlencodedParser, UserController.login);
+router.post('/login/users', urlencodedParser, UserController.login);
 
 router.put('/update/users/:id', urlencodedParser, UserController.update);
 router.put('/update/tasks/:id', urlencodedParser, TaskController.update);

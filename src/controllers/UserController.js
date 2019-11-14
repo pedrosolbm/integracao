@@ -1,6 +1,6 @@
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
-
+const saltRounds = 10;
 module.exports = {
     async index(req, res) {
         const user = await User.findAll();
@@ -8,6 +8,14 @@ module.exports = {
     },
     async tasks(req, res) {
         const user = await User.findAll({
+            include: [{
+                all: true
+            }]
+        });
+        return res.json(user);
+    },
+    async userTasks(req, res) {
+        const user = await User.findByPk(req.params.id, {
             include: [{
                 all: true
             }]
@@ -31,10 +39,11 @@ module.exports = {
             name: req.body.name,
             tel: req.body.tel,
             email: req.body.email,
-            senha: bcrypt.hashSync(req.body.senha, 9, true),
+            senha: bcrypt.hashSync(req.body.senha, saltRounds, true),
             status: true
         });
-        return res.json(user);
+        res.redirect('/');
+        // return res.json(user);
     },
     async update(req, res) {
         const user = await User.findByPk(req.params.id);
@@ -43,25 +52,26 @@ module.exports = {
     },
 
     async login(req, res) {
-        const user = await User.findAll({
-            where: {
-                email: email = req.body.email
-            }
-        });
-        if (user == null) {
-            return res.status(400).send(`Usuario nao encontrado/cadastrado`);
-        }
-        try {
-            console.log("Comparando senhas...")
-            if (bcrypt.compareSync(req.body.senha, user.senha)) {
-                res.send('SUCESSAGEM 100%!');
-            } else {
-                res.send('DEU XABU DE AUTENTICAÇÃO');
-            }
-        } catch {
-            console.log("DEU XABU!")
-            res.status(500).send();
-        } 
+        const user = await User.findOne({
+                where: {
+                    email: email = req.body.email
+                }
+            })
+            .then(function (user) {
+                if (!user) {
+                    res.redirect('/');
+                } else {
+                    bcrypt.compare(req.body.senha, user.senha, function (err, result) {
+                        if (result == true) {
+                            console.log('AUTENTICADO COM SUCESSO, MEU CONSAGRADO!');
+                            res.redirect('/list/user_tasks/' + user.id);
+                        } else {
+                            console.log('DEU XABU AO AUTENTICAR');
+                            res.send('SENHA INCORRETA', res.redirect('/'));
+                        }
+                    });
+                }
+            });
     },
 
     async destroy(req, res) {
