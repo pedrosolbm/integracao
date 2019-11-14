@@ -53,7 +53,7 @@ router.get('/list/user_tasks/:id', urlencodedParser, UserController.userTasks); 
 router.post('/register/users', urlencodedParser, UserController.create);
 router.post('/register/tasks', urlencodedParser, TaskController.create);
 
-router.post('/login/users', urlencodedParser, UserController.login);
+router.post('/login/users', urlencodedParser, UserController.login);//autentica o formulario de login
 
 router.put('/update/users/:id', urlencodedParser, UserController.update);
 router.put('/update/tasks/:id', urlencodedParser, TaskController.update);
