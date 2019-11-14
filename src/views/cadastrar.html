@@ -31,50 +31,35 @@
                 <label>Nome:</label>
                 <div class="group">
                     <i class="fas fa-user"></i>
-                    <input type="text" class="form-control" placeholder="Nome" required="required" value='pudim' name="name"/>
+                    <input type="text" class="form-control" placeholder="Nome" required="required" name="name"/>
                 </div>
             </div>
              <div class=" w3l-form-group">
                 <label>Telefone:</label>
                 <div class="group">
                     <i class="fas fa-user"></i>
-                    <input type="tel" class="form-control" placeholder="Telefone" required="required" value='22222222' name="tel" />
+                    <input type="tel" class="form-control" placeholder="Telefone" required="required" name="tel" />
                 </div>
             </div>
             <div class=" w3l-form-group">
                 <label>Email:</label>
                 <div class="group">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" class="form-control" placeholder="E-mail" required="required" value='oi@email.com'name="email"/>
+                    <input type="email" class="form-control" placeholder="E-mail" required="required" name="email"/>
                 </div>
             </div>
             <div class=" w3l-form-group">
                 <label>Senha:</label>
                 <div class="group">
                     <i class="fas fa-unlock"></i>
-                    <input type="password" class="form-control" placeholder="Senha" required="required" value='senha' name="senha" />
+                    <input type="password" class="form-control" placeholder="Senha" required="required" name="senha" />
                 </div>
             </div>
-            <button type="submit"><a href="" onclick="registra()" class="register"> Registre-se</a></button>
+            <button type="submit"><a href="" class="register"> Registre-se</a></button>
         </form>
        
     </div>
 
 </body>
-<script>
-    function registra(){
-    let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function(){
-        if(this.readyState==4 && this.status==200){
-            confirmation = JSON.parse(this.responseText);
-            alert(confirmation)
-        }
-    };
-    xhttp.open('POST',`/register/users`,true);
-    xhr.setRequestHeader("Content-Type", "http://localhost:3001");
-    xhttp.send(confirmation);
-}
-</script>
-
 
 </html>
