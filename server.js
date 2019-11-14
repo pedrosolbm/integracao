@@ -10,6 +10,7 @@ const db = require ('./src/models/database');
 
 //Iniciando o App
 const app = express();
+
 app.use(express.static(path.join(__dirname, '/src/views/web')));
 app.use(express.json());
 app.use(routes);
