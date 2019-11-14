@@ -69,6 +69,6 @@ Estórias
 
 
 
-$ docker run --name mysqldb -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mysql mysql -d
-$ winpty docker exec -it mysql-container mysql -uroot -p
+$ docker run --name mysqldb -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mysql -d mysql
+$ winpty docker exec -it mysqldb mysql -uroot -p
 

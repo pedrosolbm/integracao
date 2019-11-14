@@ -14,10 +14,11 @@ const Task = db.define('task', {
     status: {
         type: Sequelize.BOOLEAN,
     },
-
+    userId:{
+        type: Sequelize.INTEGER
+    }
 }, {
     freezeTableName: true,
 });
-// User.hasMany(Task);
-// Task.sync({ force: true });
+
 module.exports = Task;

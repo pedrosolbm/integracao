@@ -1,6 +1,5 @@
 const Sequelize = require('sequelize');
 const db = require('./database');
-const bcrypt = require('bcryptjs');
 const Task = require('./Task')
 const User = db.define('user', {
     name: {
@@ -34,7 +33,7 @@ const User = db.define('user', {
 
 User.hasMany(Task);
 Task.belongsTo(User);
-/* Forçar o user primeiro, depois comentar e forçar o task */
+/* Forcar o user primeiro, depois comentar e forçar o task */
 // User.sync({ force: true });
 // Task.sync({ force: true });
 
