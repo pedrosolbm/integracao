@@ -64,10 +64,12 @@ module.exports = {
                     bcrypt.compare(req.body.senha, user.senha, function (err, result) {
                         if (result == true) {
                             console.log('AUTENTICADO COM SUCESSO, MEU CONSAGRADO!');
-                            res.redirect('/list/user_tasks/' + user.id);
+                            res.redirect('/dashboard');
+                            // res.redirect('/list/user_tasks/' + user.id);
                         } else {
-                            console.log('DEU XABU AO AUTENTICAR');
+                            console.log('ERRRROOOOOOOOOOOOU!');
                             res.send('SENHA INCORRETA', res.redirect('/'));
+                            
                         }
                     });
                 }

@@ -19,9 +19,8 @@ let urlencodedParser = bodyParser.urlencoded({
 //     });
 // });
 router.get('/', (req, res) => {
-    res.render('./views/index.ejs');
+    res.render('./views/index.html');
 });
-
 
 // Redireciona pra pagina de cadastro
 router.get('/cadastrar', (req, res) => {
@@ -30,29 +29,29 @@ router.get('/cadastrar', (req, res) => {
     });
 });
 
-
-//redireciona pro painel 
+//redireciona pro painel do usuario
 router.get('/dashboard', (req, res) => {
     fs.readFile(__dirname + "/views/dashboard.html", function (err, data) {
         res.end(data);
     });
 });
 
+//Teste /list
 router.get('/list', (req, res) => {
     return res.send("List!");
 });
 
-router.get('/list/users', urlencodedParser, UserController.index);
-router.get('/list/tasks', urlencodedParser, TaskController.index);
-router.get('/list/user_tasks', urlencodedParser, UserController.tasks);
+router.get('/list/users', urlencodedParser, UserController.index); //lista todos os usuarios
+router.get('/list/tasks', urlencodedParser, TaskController.index); // ista todas as tarefas
+router.get('/list/user_tasks', urlencodedParser, UserController.tasks); //lista os usuarios junto com as tarefas
 
 
-router.get('/list/users/:id', urlencodedParser, UserController.search);
-router.get('/list/tasks/:id', urlencodedParser, TaskController.search);
-router.get('/list/user_tasks/:id', urlencodedParser, UserController.userTasks);
+router.get('/list/users/:id', urlencodedParser, UserController.search); //busca usuario por id
+router.get('/list/tasks/:id', urlencodedParser, TaskController.search);//busca task por id
+router.get('/list/user_tasks/:id', urlencodedParser, UserController.userTasks); //busca usuario por id
 
 router.post('/register/users', urlencodedParser, UserController.create);
-router.post('/register/tasks', urlencodedParser, UserController.create);
+router.post('/register/tasks', urlencodedParser, TaskController.create);
 
 router.post('/login/users', urlencodedParser, UserController.login);
 
