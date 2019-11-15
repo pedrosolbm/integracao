@@ -53,12 +53,13 @@ module.exports = {
             })
             .then(function (user) {
                 if (!user) {
-                    console.log('EMAIL NÃO CADASTRADO!!!');
+                    console.log('EMAIL NAO CADASTRADO!!!');
                     res.redirect('/');
                 } else {
                     bcrypt.compare(req.body.senha, user.senha, function (err, result) {
                         if (result == true) {
                             console.log('AUTENTICADO COM SUCESSO, MEU CONSAGRADO!');
+                            console.log()
                             res.redirect('/dashboard');
                             // console.log('/list/user_tasks/' + user.id);
                             // res.redirect('/list/user_tasks/' + user.id);
