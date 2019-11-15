@@ -1,6 +1,7 @@
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const saltRounds = 10;
+
 module.exports = {
     async index(req, res) {
         const user = await User.findAll();
@@ -8,14 +9,6 @@ module.exports = {
     },
     async tasks(req, res) {
         const user = await User.findAll({
-            include: [{
-                all: true
-            }]
-        });
-        return res.json(user);
-    },
-    async userTasks(req, res) {
-        const user = await User.findByPk(req.params.id, {
             include: [{
                 all: true
             }]
@@ -39,18 +32,11 @@ module.exports = {
             name: req.body.name,
             tel: req.body.tel,
             email: req.body.email,
-            senha: bcrypt.hashSync(req.body.senha, saltRounds, true),
+            senha: bycrypt.hashSync(req.body.senha, 9, true),
             status: true
         });
-        res.redirect('/');
-        // return res.json(user);
-    },
-    async update(req, res) {
-        const user = await User.findByPk(req.params.id);
-        await user.update(req.body);
         return res.json(user);
     },
-
     async login(req, res) {
         const user = await User.findOne({
                 where: {
@@ -69,13 +55,17 @@ module.exports = {
                         } else {
                             console.log('ERRRROOOOOOOOOOOOU!');
                             res.send('SENHA INCORRETA', res.redirect('/'));
-                            
+
                         }
                     });
                 }
             });
     },
-
+    async update(req, res) {
+        const user = await User.findByPk(req.params.id);
+        await user.update(req.body);
+        return res.json(user);
+    },
     async destroy(req, res) {
         const user = await User.findByPk(req.params.id);
         await user.destroy();

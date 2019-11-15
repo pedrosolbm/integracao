@@ -1,7 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('./database');
-const Task = require('./Task');
-
+const Task = require('./Task')
 const User = db.define('user', {
     name: {
         type: Sequelize.STRING,
@@ -33,7 +32,7 @@ const User = db.define('user', {
 });
 
 User.hasMany(Task);
-// Task.belongsTo(User);
+Task.belongsTo(User);
 /* Forcar o user primeiro, depois comentar e forçar o task */
 // User.sync({ force: true });
 // Task.sync({ force: true });

@@ -10,10 +10,10 @@ h1 {
     margin: 0;
     color: #ffffff;
     text-align: center;
-    font-size: 50px;
+    font-size: 32px;
     font-weight: 500;
     letter-spacing: 2px;
-    padding: 50px 0;
+    padding: 25px 0;
 }
 
 h2 {
@@ -69,7 +69,9 @@ p.w3l-register-p {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
     width: 100%;
     border: none;
     box-sizing: border-box;
@@ -80,6 +82,7 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="password"]:focus {
     outline: none;
+    border:none;
 }
 
 button {
@@ -120,9 +123,9 @@ a {
 }
 
 .register {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    
+    font-weight: bold;
 }
 
 /*--footer--*/

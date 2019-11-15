@@ -14,9 +14,7 @@ const Task = db.define('task', {
     status: {
         type: Sequelize.BOOLEAN,
     },
-    userId:{
-        type: Sequelize.INTEGER
-    }
+
 }, {
     freezeTableName: true,
 });

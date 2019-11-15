@@ -2,294 +2,488 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dashboard | Daily tasks - Projeto Final Serratec</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="./css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="./css/style.min.css" rel="stylesheet">
-
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png">
+    <meta name="keywords" content="daili tasks, agenda diaria, controle de tarefas" />
+    <link rel="icon" type="image/png" href="img/android-icon-36x36.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        daily tasks
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="css/material-dashboard.css_v=2.1.1.css" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="css/demo.css" rel="stylesheet" />
 </head>
 
-<body class="grey lighten-3">
+<body class="">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="img/sidebar-3.jpg">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
-    <!--Main Navigation-->
-    <header>
+        Tip 2: you can also add an image using data-image tag
+    -->
+            <div class="logo">
+                <a href="/dashboard" class="simple-text logo-normal">
+          daily tasks
+        </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class="nav-item active  ">
+                        <a class="nav-link" href="/dashboard">
+                            <i class="material-icons">dashboard</i>
+                            <p>Painel de Controle</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/user">
+                            <i class="material-icons">person</i>
+                            <p>Perfil de Usuário</p>
+                        </a>
+                    </li>
 
-        <!-- Navbar -->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-            <div class="container-fluid">
-
-                <!-- Brand -->
-                <a class="navbar-brand waves-effect" href="dashboard.html" target="_blank">
-                    <strong class="blue-text">daily tasks</strong>
-                </a>
-
-                <!-- Collapse -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Links -->
-                <div class="perfil">
-                    <div class="collapse navbar-collapse perfil" id="navbarSupportedContent">
-
-                        <!-- Right -->
-                        <ul class="navbar-nav nav-flex-icons perfil">
-                            <li class="nav-item">
-                                <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect"
-                                    target="_blank">
-                                    <i class="fab fa-facebook-f fa-2x"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://twitter.com/MDBootstrap" class="nav-link waves-effect" target="_blank">
-                                    <i class="fab fa-twitter fa-2x"></i>
-                                </a>
-                            </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <a class="navbar-brand" href="#pablo">Painel de Controle</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+                    <div class="collapse navbar-collapse justify-content-end">
+                        <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle waves-effect waves-light"
-                                    id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <img src="img/mauro.jpg" class="rounded-circle z-depth-0 avatar" alt="avatar image">
+                                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="material-icons">person</i>
+                                    <p class="d-lg-none d-md-block">
+                                        Conta
+                                    </p>
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                                    aria-labelledby="navbarDropdownMenuLink-333">
-                                    <a class="dropdown-item waves-effect waves-light" href="#">Configurações</a>
-                                    <a class="dropdown-item waves-effect waves-light" href="#">Sair</a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                                    <a class="dropdown-item" href="/user">Perfil</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Sair</a>
                                 </div>
                             </li>
                         </ul>
-
                     </div>
-
                 </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header card-header-tabs card-header-danger">
+                                    <div class="nav-tabs-navigation">
+                                        <div class="nav-tabs-wrapper">
+                                            <span class="nav-tabs-title">Tasks:</span>
+                                            <ul class="nav nav-tabs" data-tabs="tabs">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" href="#profile" data-toggle="modal" data-target="#modalAdd">
+                                                        <i class="material-icons">add</i> Add tasks
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#messages" data-toggle="tab">
+                                                        <i class="material-icons">picture_as_pdf
+                            </i> Exportar
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="text-warning">
+                                            <th>Tasks</th>
+                                            <th>Nome</th>
+                                            <th>Início</th>
+                                            <!-- <th>Duração</th>
+                                            <th>Fim</th>-->
+                                            <th>Status</th>
+                                            <th>Ações</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Mercado</td>
+                                                <td>09:00:00 hs</td>
+                                                <!--<td>02:00:00 hs</td>
+                                                <td>11:00:00 hs</td>-->
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" value="" checked>
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                                                    </div>
+                                                </td>
+                                                <td class="td-actions text-left">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-success btn-link btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">
+                            <i class="material-icons">edit</i>
+                          </button>
+                                                    <button type="button" rel="tooltip" title="Remove Task" class="btn btn-danger btn-link btn-sm show-alert">
+                            <i class="material-icons">close</i>
+                          </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
 
-            </div>
-        </nav>
-        <!-- Navbar -->
+                                                <td>2</td>
+                                                <td>Lavar Carro</td>
+                                                <td>13:30:00 hs</td>
+                                                <!--<td>01:00:00 hs</td>
+                                                <td>14:30:00 hs</td>-->
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" value="" checked>
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                                                    </div>
+                                                </td>
+                                                <td class="td-actions text-left">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-success btn-link btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">
+                            <i class="material-icons">edit</i>
+                          </button>
+                                                    <button type="button" rel="tooltip" title="Remove Task" class="btn btn-danger btn-link btn-sm show-alert">
+                            <i class="material-icons">close</i>
+                          </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Pegar Filho</td>
+                                                <td>15:00:00 hs</td>
+                                                <!--<td>01:00:00 hs</td>
+                                                <td>16:00:00 hs</td>-->
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" value="" checked>
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                                                    </div>
+                                                </td>
+                                                <td class="td-actions text-left">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-success btn-link btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">
+                            <i class="material-icons">edit</i>
+                          </button>
+                                                    <button type="button" rel="tooltip" title="Remove Task" class="btn btn-danger btn-link btn-sm show-alert">
+                            <i class="material-icons">close</i>
+                          </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Cinema</td>
+                                                <td>18:00:00 hs</td>
+                                                <!--<td>02:00:00 hs</td>
+                                                <td>20:00:00 hs</td>-->
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" value="" checked>
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                                                    </div>
+                                                </td>
+                                                <td class="td-actions text-left">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-success btn-link btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg"> 
+                            <i class="material-icons">edit</i>
+                          </button>
+                                                    <button type="button" rel="tooltip" title="Remove Task" class="btn btn-danger btn-link btn-sm show-alert">
+                            <i class="material-icons">close</i>
+                          </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-        <!-- Sidebar -->
-        <div class="sidebar-fixed position-fixed">
-
-            <a class="logo-wrapper waves-effect">
-                <img src="img/dailyLetras.png" class="img-fluid" alt="faily tasks">
-            </a>
-
-            <div class="list-group list-group-flush">
-                <a href="dashboard.html" class="list-group-item active waves-effect">
-                    <i class="fas fa-chart-pie mr-3"></i>Painel de Controle
-                </a>
-                <a href="perfil.html" class="list-group-item list-group-item-action waves-effect">
-                    <i class="fas fa-user mr-3"></i>Perfil
-                </a>
-            </div>
-
-        </div>
-        <!-- Sidebar -->
-
-    </header>
-    <!--Main Navigation-->
-
-    <!--Main layout-->
-    <main class="pt-5 mx-lg-5">
-        <div class="container-fluid mt-5">
-            <!--Grid row-->
-            <div class="row wow fadeIn">
-
-                <!--Grid column-->
-                <div class="col-md-12 mb-4">
-
-                    <!--Card-->
-                    <div class="card">
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                            <!-- Table  -->
-                            <table class="table table-hover">
-                                <!-- Table head -->
-                                <thead class="blue-grey lighten-4">
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Tarefa</th>
-                                        <th>Inicio</th>
-                                        <th>Duração</th>
-                                        <th>Final</th>
-                                        <th>
-                                            <button class="btn btn-primary waves-effect waves-light btn-sm"
-                                                data-toggle="modal" data-target="#modalAdd" onclick="criarTask()"><i
-                                                    class="fas fa-plus "></i>
-                                            </button>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <!-- Table head -->
-
-                                <!-- Table body -->
-                                <tbody>
-                                    <tr>
-                                        <th scope="row ">1</th>
-                                        <td></td>
-                                        <td>09:00:00 hs</td>
-                                        <td>02:00:00 hs</td>
-                                        <td>11:00:00 hs</td>
-                                        <td>
-                                            <button class="btn btn-warning waves-effect waves-light btn-sm"
-                                                data-toggle="modal" data-target="#modalView">
-                                                <i class="fas fa-eye"></i>
-                                            </button>
-
-                                            <button class="btn btn-danger btn-sm show-alert">
-                                                <i class="fas fa-trash"></i>
-                                            </button>
-
-                                            <button class="btn btn-success btn-sm" data-toggle="modal"
-                                                data-target="#modalEdit">
-                                                <i class="fas fa-edit"></i>
-                                            </button>
-                                            <img src="img/pdf.png" class="export img-fluid" width="32" height="32"
-                                                alt="exportar para pdf" title="exportar">
-                                        </td>
-
-                                    </tr>
-                                    <!-- <tr>
-                                        <th scope="row ">2</th>
-                                        <td>Ir ao mercado</td>
-                                        <td>09:00:00 hs</td>
-                                        <td>02:00:00 hs</td>
-                                        <td>11:00:00 hs</td>
-                                        <td colspan="3 ">
-                                            <button class="btn btn-warning waves-effect waves-light btn-sm" data-toggle="modal" data-target="#modalView">
-                                                    <i class="fas fa-eye"></i>
-                                                </button>
-
-                                            <button class="btn btn-danger btn-sm show-alert">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-
-                                            <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalEdit">
-                                                    <i class="fas fa-edit"></i>
-                                                </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row ">3</th>
-                                        <td>Ir ao mercado</td>
-                                        <td>09:00:00 hs</td>
-                                        <td>02:00:00 hs</td>
-                                        <td>11:00:00 hs</td>
-                                        <td colspan="3 ">
-                                            <button class="btn btn-warning waves-effect waves-light btn-sm" data-toggle="modal" data-target="#modalView">
-                                                    <i class="fas fa-eye"></i>
-                                                </button>
-
-                                            <button class="btn btn-danger btn-sm show-alert">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-
-                                            <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalEdit">
-                                                    <i class="fas fa-edit"></i>
-                                                </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row ">4</th>
-                                        <td>Ir ao mercado</td>
-                                        <td>09:00:00 hs</td>
-                                        <td>02:00:00 hs</td>
-                                        <td>11:00:00 hs</td>
-                                        <td colspan="3 ">
-                                            <button class="btn btn-warning waves-effect waves-light btn-sm" data-toggle="modal" data-target="#modalView">
-                                                    <i class="fas fa-eye"></i>
-                                                </button>
-
-                                            <button class="btn btn-danger btn-sm show-alert">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-
-                                            <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalEdit">
-                                                    <i class="fas fa-edit"></i>
-                                                </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row ">5</th>
-                                        <td>Ir ao mercado</td>
-                                        <td>09:00:00 hs</td>
-                                        <td>02:00:00 hs</td>
-                                        <td>11:00:00 hs</td>
-                                        <td colspan="3 ">
-                                            <button class="btn btn-warning waves-effect waves-light btn-sm" data-toggle="modal" data-target="#modalView">
-                                                    <i class="fas fa-eye"></i>
-                                                </button>
-
-                                            <button class="btn btn-danger btn-sm show-alert">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-
-                                            <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalEdit">
-                                                    <i class="fas fa-edit"></i>
-                                                </button>
-                                        </td>
-                                    </tr> -->
-                                </tbody>
-                                <!-- Table body -->
-                            </table>
-                            <!-- Table  -->
-
+                                </div>
+                            </div>
                         </div>
+                        <section class="col-md-12 text-center">
+                            <nav aria-label="...">
+                                <ul class="pagination">
+                                    <li class="page-item disabled rounded">
+                                        <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Próximo</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </section>
 
                     </div>
-                    <!--/.Card-->
-
                 </div>
-                <!--Grid column-->
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="copyright float-right">
+                        &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> <i class="material-icons">copyright</i> by
+                        <a href="#" target="_blank">daily tasks </a>Por uma web melhor.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
 
-    </main>
-    <!--Main layout-->
+    <!--   Core JS Files   -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootbox.locales.min.js"></script>
+    <script src="js/bootbox.all.js"></script>
+    <script src="js/core/popper.min.js"></script>
+    <script src="js/core/bootstrap-material-design.min.js"></script>
+    <script src="js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Plugin for the momentJs  -->
+    <script src="js/plugins/moment.min.js"></script>
+    <!--  Plugin for Sweet Alert -->
+    <script src="js/plugins/sweetalert2.js"></script>
+    <!-- Forms Validations Plugin -->
+    <script src="js/plugins/jquery.validate.min.js"></script>
+    <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+    <script src="js/plugins/jquery.bootstrap-wizard.js"></script>
+    <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+    <script src="js/plugins/bootstrap-selectpicker.js"></script>
+    <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+    <script src="js/plugins/bootstrap-datetimepicker.min.js"></script>
+    <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+    <script src="js/plugins/jquery.dataTables.min.js"></script>
+    <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+    <script src="js/plugins/bootstrap-tagsinput.js"></script>
+    <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+    <script src="js/plugins/jasny-bootstrap.min.js"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="js/plugins/nouislider.min.js"></script>
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <!-- Library for adding dinamically elements -->
+    <script src="js/plugins/arrive.min.js"></script>
+    <!-- Chartist JS -->
+    <script src="js/plugins/chartist.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+    <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+    <script src="js/demo.js"></script>
+    <script>
+        $(document).ready(function() {
+            $().ready(function() {
+                $sidebar = $('.sidebar');
 
-    <!--Footer-->
-    <!-- <footer class="page-footer text-center font-small primary-color-dark darken-2 mt-4 wow fadeIn "> -->
+                $sidebar_img_container = $sidebar.find('.sidebar-background');
 
-    <!-- <hr class="my-4 "> -->
-    <!--Copyright-->
-    <!-- <div class="footer-copyright py-3 copy ">
-            © 2019 Copyright:
-            <a href="# " target="_blank "> Daily Tasks | Projeto Final | Serratec </a>
-        </div> -->
-    <!--/.Copyright-->
+                $full_page = $('.full-page');
 
-    <!-- </footer> -->
-    <!--/.Footer-->
+                $sidebar_responsive = $('body > .navbar-collapse');
 
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript " src="node_modules/mdbootstrap/js/jquery-3.4.1.min.js "></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript " src="node_modules/mdbootstrap/js/popper.min.js "></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript " src="node_modules/mdbootstrap/js/bootstrap.min.js "></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript " src="node_modules/mdbootstrap/js/mdb.min.js "></script>
-    <!-- bootbox code -->
-    <script src="node_modules/bootbox/bootbox.js "></script>
-    <script src="node_modules/bootbox/bootbox.locales.js "></script>
-    <!-- Initializations -->
-    <script type="text/javascript ">
-        // Animations initialization
-        new WOW().init();
-        $(document).on("click ", ".show-alert ", function (e) {
+                window_width = $(window).width();
+
+                fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+                if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+                    if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+                        $('.fixed-plugin .dropdown').addClass('open');
+                    }
+
+                }
+
+                $('.fixed-plugin a').click(function(event) {
+                    // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+                    if ($(this).hasClass('switch-trigger')) {
+                        if (event.stopPropagation) {
+                            event.stopPropagation();
+                        } else if (window.event) {
+                            window.event.cancelBubble = true;
+                        }
+                    }
+                });
+
+                $('.fixed-plugin .active-color span').click(function() {
+                    $full_page_background = $('.full-page-background');
+
+                    $(this).siblings().removeClass('active');
+                    $(this).addClass('active');
+
+                    var new_color = $(this).data('color');
+
+                    if ($sidebar.length != 0) {
+                        $sidebar.attr('data-color', new_color);
+                    }
+
+                    if ($full_page.length != 0) {
+                        $full_page.attr('filter-color', new_color);
+                    }
+
+                    if ($sidebar_responsive.length != 0) {
+                        $sidebar_responsive.attr('data-color', new_color);
+                    }
+                });
+
+                $('.fixed-plugin .background-color .badge').click(function() {
+                    $(this).siblings().removeClass('active');
+                    $(this).addClass('active');
+
+                    var new_color = $(this).data('background-color');
+
+                    if ($sidebar.length != 0) {
+                        $sidebar.attr('data-background-color', new_color);
+                    }
+                });
+
+                $('.fixed-plugin .img-holder').click(function() {
+                    $full_page_background = $('.full-page-background');
+
+                    $(this).parent('li').siblings().removeClass('active');
+                    $(this).parent('li').addClass('active');
+
+
+                    var new_image = $(this).find("img").attr('src');
+
+                    if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+                        $sidebar_img_container.fadeOut('fast', function() {
+                            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+                            $sidebar_img_container.fadeIn('fast');
+                        });
+                    }
+
+                    if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+                        var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                        $full_page_background.fadeOut('fast', function() {
+                            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+                            $full_page_background.fadeIn('fast');
+                        });
+                    }
+
+                    if ($('.switch-sidebar-image input:checked').length == 0) {
+                        var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+                        var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                        $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+                        $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+                    }
+
+                    if ($sidebar_responsive.length != 0) {
+                        $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+                    }
+                });
+
+                $('.switch-sidebar-image input').change(function() {
+                    $full_page_background = $('.full-page-background');
+
+                    $input = $(this);
+
+                    if ($input.is(':checked')) {
+                        if ($sidebar_img_container.length != 0) {
+                            $sidebar_img_container.fadeIn('fast');
+                            $sidebar.attr('data-image', '#');
+                        }
+
+                        if ($full_page_background.length != 0) {
+                            $full_page_background.fadeIn('fast');
+                            $full_page.attr('data-image', '#');
+                        }
+
+                        background_image = true;
+                    } else {
+                        if ($sidebar_img_container.length != 0) {
+                            $sidebar.removeAttr('data-image');
+                            $sidebar_img_container.fadeOut('fast');
+                        }
+
+                        if ($full_page_background.length != 0) {
+                            $full_page.removeAttr('data-image', '#');
+                            $full_page_background.fadeOut('fast');
+                        }
+
+                        background_image = false;
+                    }
+                });
+
+                $('.switch-sidebar-mini input').change(function() {
+                    $body = $('body');
+
+                    $input = $(this);
+
+                    if (md.misc.sidebar_mini_active == true) {
+                        $('body').removeClass('sidebar-mini');
+                        md.misc.sidebar_mini_active = false;
+
+                        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+                    } else {
+
+                        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+                        setTimeout(function() {
+                            $('body').addClass('sidebar-mini');
+
+                            md.misc.sidebar_mini_active = true;
+                        }, 300);
+                    }
+
+                    // we simulate the window Resize so the charts will get updated in realtime.
+                    var simulateWindowResize = setInterval(function() {
+                        window.dispatchEvent(new Event('resize'));
+                    }, 180);
+
+                    // we stop the simulation of Window Resize after the animations are completed
+                    setTimeout(function() {
+                        clearInterval(simulateWindowResize);
+                    }, 1000);
+
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Javascript method's body can be found in assets/js/demos.js
+            md.initDashboardPageCharts();
+
+        });
+        $(document).on("click", ".show-alert", function(e) {
             bootbox.confirm({
-                message: "Deseja deletar esta tarefa? ",
+                message: "Deseja exlcuir está tarefa?",
                 buttons: {
                     confirm: {
                         label: 'Sim',
@@ -300,108 +494,104 @@
                         className: 'btn-danger'
                     }
                 },
-                callback: function (result) {
-                    console.log('this was logged int the callback: ' + result);
+                callback: function(result) {
+                    console.log('This was logged in the callback' + result);
                 }
             });
         });
-
-        function criarTask() {
-            alert('ENTROU');
-            axios.post('http://localhost:3001/register/tasks', {
-                    
-                    tarefa: "Lavar o cachorro",
-                    data: "2019-12-20",
-                    hora: "19:30:00",
-                    status: false,
-                    userId: 2,
-                })
-                .then(function (response) {
-                    console.log(response);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-        }
+        $('#modalAdd').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('whatever') // Extract info from data-* attributes
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text('New message to ' + recipient)
+            modal.find('.modal-body input').val(recipient)
+        })
     </script>
+    <!--Modal Add-->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Deseja editar esta tarefa?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="">Tarefa</label>
+                                    <input type="text" class="form-control" placeholder="nome da tarefa">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="">Início</label>
+                                    <input type="datetime-local" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="">Status</label>
+                                    <input type="text" class="form-control" placeholder="ativa ou concluida">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modalAdd">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Deseja adicionar uma tarefa?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="">Tarefa</label>
+                                    <input type="text" class="form-control" placeholder="nome da tarefa">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="">Início</label>
+                                    <input type="datetime-local" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="">Status</label>
+                                    <input type="text" class="form-control" placeholder="ativa ou concluida">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Adiconar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-<!--Criando modals para inserir deletar e atualizar-->
-<!-- Modal Add - inserir -->
-<div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-    <!-- Change class .modal-sm to change the size of the modal -->
-    <div class="modal-dialog modal-lg" role="document">
-
-
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title w-100" id="myModalLabel">Deseja inserir uma tarefa?</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary btn-sm">Inserir</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /Modal Add - inserir -->
-<!--#####################################-->
-<!-- Modal View -->
-<div class="modal fade" id="modalView" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-    <!-- Change class .modal-sm to change the size of the modal -->
-    <div class="modal-dialog modal-lg" role="document">
-
-
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title w-100" id="myModalLabel">Visualizando item id</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!--/Modal view -->
-<!--#########################################-->
-<!--/Modal edit-->
-<div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-    <!-- Change class .modal-sm to change the size of the modal -->
-    <div class="modal-dialog modal-lg" role="document">
-
-
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title w-100" id="myModalLabel">Deseja Editar esta tarefa?</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Editar</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 </html>
