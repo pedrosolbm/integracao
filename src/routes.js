@@ -50,7 +50,7 @@ router.get('/list/tasks/:id', urlencodedParser, TaskController.search); //busca 
 router.get('/list/user_tasks/:id', urlencodedParser, UserController.userTasks); // busca usuario e suas tarefas por id do usuário 
 
 router.post('/register/users', urlencodedParser, urlencodedParser, UserController.create);
-router.post('/register/tasks', urlencodedParser, UserController.create);
+router.post('/register/tasks', urlencodedParser, TaskController.create);
 
 router.post('/login/users', urlencodedParser, UserController.login);
 
