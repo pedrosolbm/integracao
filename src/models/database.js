@@ -7,6 +7,7 @@ const db = new Sequelize('dt', 'root', 'mysql', {
 });
 
 module.exports = db;
+
 /* const db = new Sequelize('dt', 'postgres', 'postgres', {
     host: 'localhost',
     port: 5432,
